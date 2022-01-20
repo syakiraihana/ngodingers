@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>SILOKERNF - Sistem Informasi Lowongan Kerja Mitra</title>
+        <link rel="stylesheet" href="style.css">
+        <!--Logo-->
+        <link href="img/logotab.png" rel="icon">
+    </head>
+    <body>
+        <div class="container">
+          <h1>Login</h1>
+            <form>
+                <label>Username</label><br>
+                <input type="text" id="username"><br>
+                <label>Password</label><br>
+                <input type="password" id="password"><br>
+                <button onclick="login()">Login</button>
+                <p> Belum punya akun?
+                  <a href="register.html">Register User</a>
+                </p>
+            </form>
+        </div>
+    </body>
+</html>
+
+<script>
+    function login() {
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    if (username == "ngodingers" && password == "ngodingers09"){
+        alert("login sukses");
+        window.location.href  = "index.html"
+    }
+    else {
+        alert("login tidak berhasil, silahkan ulang!");
+    }
+}
+</script>

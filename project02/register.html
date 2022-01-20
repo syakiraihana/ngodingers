@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>SILOKERNF - Sistem Informasi Lowongan Kerja Mitra</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="img/logotab.png" rel="icon">
+    </head>
+
+    <body>
+        <div class="container">
+          <h1>Register</h1>
+            <form>
+                <label>Nama Lengkap</label>
+                <br>
+                <input type="text" id="namalengkap">
+                <label>Email</label>
+                <br>
+                <input type="email" id="email">
+                <label>Username</label>
+                <br>
+                <input type="text" id="username">
+                <br>
+                <br>
+                <label>Password</label>
+                <br>
+                <input type="password" id="password">
+                <br>
+                <label>Cek Password</label>
+                <br>
+                <input type="password" id="cekpassword">
+                <br>
+                <button onclick="daftar()">Daftar</button>
+                <p> Sudah punya akun?
+                  <a href="login.html">Login di sini</a>
+                </p>
+            </form>
+        </div>
+    </body>
+</html>
+
+<script>
+    function daftar() {
+    let namalengkap = document.getElementById("namalengkap").value;
+    let email = document.getElementById("email").value;
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+    let cekpassword = document.getElementById("cekpassword").value;
+
+    if (namalengkap == "ngodingers" && email == "ngodingers09@gmail.com" && username == "ngodingers" && password == "ngodingers09" && cekpassword == "ngodingers09"){
+        alert("pendaftaran berhasil");
+        window.location.href  = "index.html"
+    }
+    else {
+        alert("pendaftaran tidak berhasil, silahkan ulang!");
+    }
+}
+</script>
